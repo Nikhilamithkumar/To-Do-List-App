@@ -3,13 +3,6 @@ const listContainer = document.getElementById("list-container");
 const completedCounter = document.getElementById("completed-counter");
 const uncompletedCounter = document.getElementById("uncompleted-counter");
 
-const checkbox = li.querySelector("input");
-const editBtn = li.querySelector(".edit-btn");
-const taskSpan = li.querySelector("span");
-const deleteBtn = li.querySelector(".delete-btn");
-
-
-
 function updateCounters() {
   const completedTasks = document.querySelectorAll(".completed").length;
   const uncompletedTasks = document.querySelectorAll("li:not(.completed)").length;
@@ -38,8 +31,13 @@ function addTask() {
     `;
 
   listContainer.appendChild(li);
+
   inputBox.value = " ";
 
+  const checkbox = li.querySelector("input");
+  const editBtn = li.querySelector(".edit-btn");
+  const taskSpan = li.querySelector("span");
+  const deleteBtn = li.querySelector(".delete-btn");
 
   checkbox.addEventListener("click", function () {
     li.classList.toggle("completed", checkbox.checked);
@@ -65,7 +63,6 @@ function addTask() {
   updateCounters();
 }
 
-// add task when pressing Enter key
 inputBox.addEventListener("keyup", function (event) {
   if (event.key === "Enter") {
     addTask();
