@@ -5,7 +5,7 @@
 }
 body { 
   background: rgb(0,0,0);
-  background: radial-gradient(circle, rgba(0,0,0,0.028124999999999956) 0%, rgba(253,187,45,1) 100%);
+  background: radial-gradient(circle, rgba(0,0,0,0.028124999999999956) 0%, rgb(119, 118, 115) 100%);
   font-family: Arial, sans-serif;
   text-align: center;
   margin-top: 50px;
